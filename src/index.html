@@ -8,9 +8,24 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body class="mat-typography">
-  <app-root></app-root>
-</body>
+
+<body>
+    <!-- This header will *not* be styled because it is outside `.mat-typography` -->
+    <h1>Top header (Material Typography doesn't apply here)</h1>
+
+    <!-- This paragraph will be styled as `body-1` via the `.mat-body` CSS class applied -->
+    <p class="mat-body">Introductory text</p>
+
+    <div class="mat-typography">
+      <!-- This header will be styled as `title` because it is inside `.mat-typography` -->
+      <h2>Inner header</h2>
+
+      <!-- This paragraph will be styled as `body-1` because it is inside `.mat-typography` -->
+      <p>Some inner text</p>
+      <app-root></app-root>
+    </div>
+  </body>
 </html>
